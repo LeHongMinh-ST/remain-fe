@@ -1,0 +1,68 @@
+@mixin pc-md {
+  @media screen and (max-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin pc-m {
+  @media screen and (max-width: (1279px)) {
+    @content;
+  }
+}
+
+@mixin pc-xs {
+  @media screen and (max-width: (1279px)) and (min-width: 835px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (max-width: (1024px)) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media screen and (max-width: (834px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: (945px)) {
+    @content;
+  }
+}
+
+@mixin tablet-xs {
+  @media screen and (max-width: (600px)) {
+    @content;
+  }
+}
+
+@mixin sp-xl {
+  @media screen and (max-width: (700px)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: (500px)) {
+    @content;
+  }
+}
+@mixin sp-xs {
+  @media screen and (max-width: (344px)) {
+    @content;
+  }
+}
+
+@mixin mb-m {
+  @media screen and (max-width: (376px)) {
+    @content;
+  }
+}
+
+@function size($number, $windowWidth: 1920) {
+  $result: 100 * $number / $windowWidth;
+  @return $result * 1vw;
+}
