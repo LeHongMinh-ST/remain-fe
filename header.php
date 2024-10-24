@@ -10,8 +10,7 @@
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri();
   ?>/assets/bootstrap/css/bootstrap.min.css?v=5.3.0" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css?v=1.0.0" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/layout.css?v=1.0.0" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css?v=1.0.0" />
 
   <script src="<?php echo get_template_directory_uri(); ?>/assets/bootstrap/js/bootstrap.min.js?v=5.3.0"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js"></script>
