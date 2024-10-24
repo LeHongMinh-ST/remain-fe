@@ -1,62 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package remian-in
+ */
 
+?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Remain In</title>
-  <?php wp_head(); ?>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri();
-  ?>/assets/bootstrap/css/bootstrap.min.css?v=5.3.0" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css?v=1.0.0" />
-
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/bootstrap/js/bootstrap.min.js?v=5.3.0"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/bootstrap.bundle.min.js "></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper-bundle.min.js "></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js "></script>
-
+    <?php wp_head(); ?>
 </head>
 
-<body>
-  <header id="header" class="mb-3">
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<header id="header" class="mb-3">
     <div class="wrap-logo">
-      <a href="/">
-        <img loading="lazy" src="<?php
-        echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo">
-      </a>
+        <a href="/">
+            <img loading="lazy" src="<?= THEME_URI ?>/images/logo.svg" alt="logo">
+        </a>
     </div>
     <div class="wrap-menu">
-      <ul>
-        <li>
-          <a href="/">VISION</a>
-        </li>
-        <li>
-          <a href="/">WHO WE ARE</a>
-        </li>
-        <li>
-          <a href="/">SERVICE+</a>
-        </li>
-        <li>
-          <a href="/">CASE</a>
-        </li>
-        <li>
-          <a href="/">NEWS</a>
-        </li>
-        <li>
-          <a href="/">RECRUIT</a>
-        </li>
-      </ul>
-      <div class="wrap-locale">
-        <button>JP</button>
-        <div class="line"></div>
-        <button>EN</button>
-      </div>
-      <button class="contact">CONTACT</button>
+        <ul>
+            <li>
+                <a href="/">VISION</a>
+            </li>
+            <li>
+                <a href="/">WHO WE ARE</a>
+            </li>
+            <li>
+                <a href="/">SERVICE+</a>
+            </li>
+            <li>
+                <a href="/">CASE</a>
+            </li>
+            <li>
+                <a href="/">NEWS</a>
+            </li>
+            <li>
+                <a href="/">RECRUIT</a>
+            </li>
+        </ul>
+        <div class="wrap-locale">
+            <button>JP</button>
+            <div class="line"></div>
+            <button>EN</button>
+        </div>
+        <button class="contact">CONTACT</button>
     </div>
     <button class="btn-menu">
-      <span></span>
+        <span></span>
     </button>
-  </header>
+</header>
