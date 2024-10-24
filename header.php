@@ -57,4 +57,7 @@
       </div>
       <button class="contact">CONTACT</button>
     </div>
+    <button class="btn-menu">
+      <span></span>
+    </button>
   </header>
