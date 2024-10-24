@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package remian-in
+ * @package Remain_In
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function remian_in_jetpack_setup() {
+function remain_in_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'remian_in_infinite_scroll_render',
+			'render'    => 'remain_in_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function remian_in_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'remian-in-style',
+				'stylesheet' => 'remain-in-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function remian_in_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'remian_in_jetpack_setup' );
+add_action( 'after_setup_theme', 'remain_in_jetpack_setup' );
 
-if ( ! function_exists( 'remian_in_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'remain_in_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function remian_in_infinite_scroll_render() {
+	function remain_in_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

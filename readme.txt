@@ -1,4 +1,4 @@
-=== remian-in ===
+=== Remain In ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,7 +10,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called remian-in.
+A starter theme called Remain In.
 
 == Description ==
 
@@ -26,7 +26,7 @@ Description
 
 = Does this theme support any plugins? =
 
-remian-in includes support for WooCommerce and for Infinite Scroll in Jetpack.
+Remain In includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

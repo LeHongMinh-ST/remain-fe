@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package remian-in
+ * @package Remain_In
  */
 
 get_header();

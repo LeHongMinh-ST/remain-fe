@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package remian-in
+ * @package Remain_In
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses remian_in_header_style()
+ * @uses remain_in_header_style()
  */
-function remian_in_custom_header_setup() {
+function remain_in_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'remian_in_custom_header_args',
+			'remain_in_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'remian_in_header_style',
+				'wp-head-callback'   => 'remain_in_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'remian_in_custom_header_setup' );
+add_action( 'after_setup_theme', 'remain_in_custom_header_setup' );
 
-if ( ! function_exists( 'remian_in_header_style' ) ) :
+if ( ! function_exists( 'remain_in_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see remian_in_custom_header_setup().
+	 * @see remain_in_custom_header_setup().
 	 */
-	function remian_in_header_style() {
+	function remain_in_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

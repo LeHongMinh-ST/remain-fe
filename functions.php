@@ -1,10 +1,10 @@
 <?php
 /**
- * remian-in functions and definitions
+ * Remain In functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package remian-in
+ * @package Remain_In
  */
 
 if ( ! defined( 'THEME_PREFIX' ) ) {
@@ -13,8 +13,8 @@ if ( ! defined( 'THEME_PREFIX' ) ) {
 }
 
 if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+    // Replace the version number of the theme on each release.
+    define( '_S_VERSION', '1.0.0' );
 }
 
 if (! defined('THEME_URI')) {
@@ -29,14 +29,14 @@ if (! defined('THEME_URI')) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function remian_in_setup() {
+function remain_in_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on remian-in, use a find and replace
-		* to change 'remian-in' to the name of your theme in all the template files.
+		* If you're building a theme based on Remain In, use a find and replace
+		* to change 'remain-in' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'remian-in', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'remain-in', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -59,7 +59,7 @@ function remian_in_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'remian-in' ),
+			'menu-1' => esc_html__( 'Primary', 'remain-in' ),
 		)
 	);
 
@@ -84,7 +84,7 @@ function remian_in_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'remian_in_custom_background_args',
+			'remain_in_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -110,7 +110,7 @@ function remian_in_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'remian_in_setup' );
+add_action( 'after_setup_theme', 'remain_in_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -119,22 +119,22 @@ add_action( 'after_setup_theme', 'remian_in_setup' );
  *
  * @global int $content_width
  */
-function remian_in_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'remian_in_content_width', 640 );
+function remain_in_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'remain_in_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'remian_in_content_width', 0 );
+add_action( 'after_setup_theme', 'remain_in_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function remian_in_widgets_init() {
+function remain_in_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'remian-in' ),
+			'name'          => esc_html__( 'Sidebar', 'remain-in' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'remian-in' ),
+			'description'   => esc_html__( 'Add widgets here.', 'remain-in' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -142,13 +142,12 @@ function remian_in_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'remian_in_widgets_init' );
+add_action( 'widgets_init', 'remain_in_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function remian_in_scripts() {
-    //style
+function remain_in_scripts() {
     wp_enqueue_style(THEME_PREFIX.'-bootstrap', THEME_URI.'/css/bootstrap.min.css', [], _S_VERSION);
     wp_enqueue_style(THEME_PREFIX.'-swiper-bundle', THEME_URI.'/css/swiper-bundle.min.css', [], _S_VERSION);
     wp_enqueue_style(THEME_PREFIX.'-app', THEME_URI.'/css/app.css', [], _S_VERSION);
@@ -160,7 +159,7 @@ function remian_in_scripts() {
     wp_enqueue_script(THEME_PREFIX.'-swiper-bundle', THEME_URI.'/js/swiper-bundle.min.js', [], _S_VERSION, true);
     wp_enqueue_script(THEME_PREFIX.'-main', THEME_URI.'/js/main.js', [], _S_VERSION, true);
 }
-add_action( 'wp_enqueue_scripts', 'remian_in_scripts' );
+add_action( 'wp_enqueue_scripts', 'remain_in_scripts' );
 
 /**
  * Implement the Custom Header feature.
